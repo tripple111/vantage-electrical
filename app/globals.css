@@ -60,7 +60,7 @@
   --secondary: #14213d;
   --secondary-foreground: #ffffff;
   --muted: #ebf2fa;
-  --muted-foreground: rgb(20 33 61 / 70%);
+  --muted-foreground: rgb(20 33 61 / 85%);
   --accent: #ebf2fa;
   --accent-foreground: #14213d;
   --destructive: oklch(0.577 0.245 27.325);

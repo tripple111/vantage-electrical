@@ -31,7 +31,7 @@ Footer- Contact details, service area list, copyright
 Page1: Home
 
 1. Hero -tagline, CTA, “Call Now” 3 trust stats along bottom
-2. Featured services, 3 service cards (name + short description), link to services page
+2. Featured services, 3 service: Emergency repairs, Residential electrical, Commercial electrical (name + short description), link to services page
 3. Reviews- 4 client testimonial cards in 2x2 grid
 4. Closing CTA band- “Need an electrician? Get a free quote” + button to contact
    Page 2: Services
