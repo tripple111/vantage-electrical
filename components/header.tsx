@@ -10,9 +10,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-
-const PHONE_DISPLAY = "01234 567890"
-const PHONE_HREF = "tel:01234567890"
+import { site } from "@/lib/site"
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -51,15 +49,15 @@ export function Header() {
 
         <div className="flex items-center gap-2 md:gap-6">
           <a
-            href={PHONE_HREF}
+            href={site.phone.href}
             className="hidden items-center gap-2 font-semibold md:flex"
           >
             <PhoneIcon className="size-4" aria-hidden="true" />
-            {PHONE_DISPLAY}
+            {site.phone.display}
           </a>
 
           <Button asChild className="h-10 px-4 text-sm font-bold">
-            <a href={PHONE_HREF}>
+            <a href={site.phone.href}>
               <PhoneIcon aria-hidden="true" />
               Call Now
             </a>
@@ -97,11 +95,11 @@ export function Header() {
                 </ul>
               </nav>
               <a
-                href={PHONE_HREF}
+                href={site.phone.href}
                 className="mx-4 flex items-center gap-2 py-3 text-base font-semibold"
               >
                 <PhoneIcon className="size-4" aria-hidden="true" />
-                {PHONE_DISPLAY}
+                {site.phone.display}
               </a>
             </SheetContent>
           </Sheet>

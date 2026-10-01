@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import "./globals.css";
+
+// Regenerate prerendered pages daily so the footer's copyright year rolls over without a redeploy.
+export const revalidate = 86400;
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -26,7 +30,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <Header />
-        {children}
+        <div className="flex flex-1 flex-col">{children}</div>
+        <Footer />
       </body>
     </html>
   );
