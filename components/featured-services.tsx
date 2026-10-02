@@ -13,17 +13,20 @@ import {
 const services = [
   {
     name: "Emergency repairs",
+    href: "/services#emergency-repairs",
     description:
       "Fast, round-the-clock help when power fails or something's unsafe.",
     icon: ZapIcon,
   },
   {
     name: "Residential electrical",
+    href: "/services#residential-electrical",
     description: "Rewiring, lighting, sockets and safety checks for your home.",
     icon: HomeIcon,
   },
   {
     name: "Commercial electrical",
+    href: "/services#commercial-electrical",
     description:
       "Installations and maintenance that keep your business running.",
     icon: Building2Icon,
@@ -42,10 +45,10 @@ export function FeaturedServices() {
         </h2>
 
         <ul className="grid gap-4 md:grid-cols-3 md:gap-6">
-          {services.map(({ name, description, icon: Icon }) => (
+          {services.map(({ name, href, description, icon: Icon }) => (
             <li key={name}>
               <Link
-                href="/services"
+                href={href}
                 className="group block h-full rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
               >
                 <Card className="h-full transition-shadow [--card-spacing:--spacing(5)] group-hover:shadow-md md:[--card-spacing:--spacing(6)]">

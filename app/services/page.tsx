@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
+import { ServiceRows } from "@/components/service-rows";
 
 export const metadata: Metadata = {
-  title: "Services | Vantage Electrical",
+  title: "Services",
   description:
     "Emergency repairs, residential and commercial electrical work from your local electricians.",
 };
 
 export default function ServicesPage() {
   return (
+    <>
     <section aria-labelledby="services-intro-heading">
       <div className="mx-auto max-w-6xl px-4 py-10 md:py-16">
         <h1
@@ -22,5 +24,10 @@ export default function ServicesPage() {
         </p>
       </div>
     </section>
+    <div className="mx-auto w-full max-w-6xl px-4">
+      <hr className="border-border" />
+    </div>
+    <ServiceRows />
+    </>
   );
 }

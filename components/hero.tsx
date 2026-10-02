@@ -39,7 +39,7 @@ export function Hero() {
 
         <Image
           src={switchboard}
-          alt="Wired electrical switchboard with circuit breakers"
+          alt="Electrician testing the wiring in a switchboard"
           placeholder="blur"
           loading="eager"
           sizes="(min-width: 1152px) 552px, (min-width: 768px) 50vw, 100vw"
