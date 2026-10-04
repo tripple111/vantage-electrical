@@ -44,7 +44,8 @@ Page1: Home
    Form- name, phone, email, service needed (select), request type “Urgent – call me “/ “Schedule visit”, preferred date + time window (morning/ afternoon)
    Info column- phone, email, hours, service area
 
-UI only — no submission logic, no API, no Server Actions yet.
+Form submission: a Server Action validates with Zod and sends the enquiry by email via Resend.
+Keys live in .env.local (RESEND_API_KEY, CONTACT_EMAIL) and in Vercel's environment variables — never expose them in client code or commit them.
 
 ## Working rules
 

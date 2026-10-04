@@ -1,14 +1,23 @@
 "use client"
 
-import { useState } from "react"
+import { createContext, startTransition, useActionState, useContext } from "react"
 import { CircleCheckIcon } from "lucide-react"
 
-// The only client-side part of the contact form: stops the page reload and
-// swaps the form for a thank-you message. Nothing is sent or stored.
-export function ContactFormShell({ children }: { children: React.ReactNode }) {
-  const [submitted, setSubmitted] = useState(false)
+import { sendEnquiry, type EnquiryState } from "@/app/contact/actions"
+import { Button } from "@/components/ui/button"
+import { site } from "@/lib/site"
 
-  if (submitted) {
+const PendingContext = createContext(false)
+
+// The client-side part of the contact form: submits to the sendEnquiry
+// Server Action and shows the sending, success and error states.
+export function ContactFormShell({ children }: { children: React.ReactNode }) {
+  const [state, formAction, pending] = useActionState<EnquiryState, FormData>(
+    sendEnquiry,
+    { status: "idle" }
+  )
+
+  if (state.status === "success") {
     return (
       <div
         role="status"
@@ -25,11 +34,28 @@ export function ContactFormShell({ children }: { children: React.ReactNode }) {
       aria-label="Contact form"
       className="flex flex-col gap-6"
       onSubmit={(event) => {
+        // Submitting via onSubmit (not the action prop) keeps the fields
+        // filled in if sending fails, so the visitor can try again.
         event.preventDefault()
-        setSubmitted(true)
+        const formData = new FormData(event.currentTarget)
+        startTransition(() => formAction(formData))
       }}
     >
-      {children}
+      <PendingContext value={pending}>{children}</PendingContext>
+      {state.status === "error" && !pending && (
+        <p role="alert" className="font-semibold">
+          Something went wrong. Please call us on {site.phone.display}.
+        </p>
+      )}
     </form>
+  )
+}
+
+export function SubmitButton({ className }: { className?: string }) {
+  const pending = useContext(PendingContext)
+  return (
+    <Button type="submit" disabled={pending} className={className}>
+      {pending ? "Sending…" : "Send request"}
+    </Button>
   )
 }

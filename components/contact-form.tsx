@@ -1,5 +1,4 @@
-import { ContactFormShell } from "@/components/contact-form-shell"
-import { Button } from "@/components/ui/button"
+import { ContactFormShell, SubmitButton } from "@/components/contact-form-shell"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -11,23 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-
-const services = [
-  "Emergency repairs",
-  "Residential electrical",
-  "Commercial electrical",
-  "Other / not sure",
-]
-
-const requestTypes = [
-  { id: "request-urgent", value: "urgent", label: "Urgent – call me" },
-  { id: "request-visit", value: "visit", label: "Schedule a visit" },
-]
-
-const timeWindows = [
-  { id: "time-morning", value: "morning", label: "Morning" },
-  { id: "time-afternoon", value: "afternoon", label: "Afternoon" },
-]
+import { requestTypes, services, timeWindows } from "@/lib/contact-options"
 
 // Shared sizing so every control is full width and easy to tap.
 const fieldClass =
@@ -46,7 +29,7 @@ function RadioOptions({
   name: string
   labelId: string
   required?: boolean
-  options: { id: string; value: string; label: string }[]
+  options: readonly { id: string; value: string; label: string }[]
 }) {
   return (
     <RadioGroup
@@ -173,12 +156,7 @@ export function ContactForm() {
             />
           </div>
 
-          <Button
-            type="submit"
-            className="mt-2 h-12 w-full px-8 text-base font-bold sm:w-auto sm:self-start"
-          >
-            Send request
-          </Button>
+          <SubmitButton className="mt-2 h-12 w-full px-8 text-base font-bold sm:w-auto sm:self-start" />
         </ContactFormShell>
       </CardContent>
     </Card>
