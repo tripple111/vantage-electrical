@@ -12,14 +12,14 @@ export function CtaBand() {
             id="cta-heading"
             className="text-2xl font-extrabold text-balance break-words md:text-4xl"
           >
-            Need an electrician? Get a free quote
+            Need an electrician? Get a free estimate
           </h2>
           <Button
             asChild
             className="h-12 w-full px-8 text-base font-bold focus-visible:border-secondary-foreground focus-visible:ring-secondary-foreground/60 md:w-auto"
           >
             <Link href="/contact">
-              Get a free quote
+              Get a free estimate
               <ArrowRightIcon aria-hidden="true" />
             </Link>
           </Button>

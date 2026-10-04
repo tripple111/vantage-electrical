@@ -18,7 +18,7 @@ export function Hero() {
             Reliable Electricians for Homes &amp; Businesses
           </h1>
           <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Keeping you plugged in, from emergency repairs to full rewires.
+            Keeping you plugged in, from emergency repairs to full rewiring.
           </p>
           <div className="mt-2 flex flex-col gap-3 sm:flex-row">
             <Button asChild className="h-12 px-6 text-base font-bold">
@@ -32,7 +32,7 @@ export function Hero() {
               variant="outline"
               className="h-12 border-foreground bg-transparent px-6 text-base font-bold hover:bg-secondary hover:text-secondary-foreground"
             >
-              <Link href="/contact">Get a free quote</Link>
+              <Link href="/contact">Get a free estimate</Link>
             </Button>
           </div>
         </div>

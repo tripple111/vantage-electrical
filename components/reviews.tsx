@@ -6,27 +6,27 @@ import { Card, CardContent } from "@/components/ui/card"
 const reviews = [
   {
     name: "Sarah",
-    town: "Northfield",
+    town: "Lakewood",
     quote:
-      "Our power went out late on a Friday and Vantage had someone here within the hour. Friendly, tidy and fairly priced.",
+      "Our power went out late on a Friday and Vantage had someone here within the hour. Friendly, clean and fairly priced.",
   },
   {
     name: "James",
-    town: "Easton",
+    town: "Oak Grove",
     quote:
       "They rewired our whole kitchen and kept us updated at every step. Couldn't recommend them more.",
   },
   {
     name: "Priya",
-    town: "Westbury",
+    town: "Cedar Park",
     quote:
-      "Booked a safety check for our rental flat and it was quick, thorough and explained clearly.",
+      "Booked a safety check for our rental apartment and it was quick, thorough and explained clearly.",
   },
   {
     name: "Tom",
-    town: "Southgate",
+    town: "Maple Heights",
     quote:
-      "Fitted new lighting across our shop without disrupting trading. Excellent work.",
+      "Installed new lighting across our store without disrupting business. Excellent work.",
   },
 ]
 

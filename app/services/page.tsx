@@ -19,7 +19,7 @@ export default function ServicesPage() {
           Our Services
         </h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground md:mt-6 md:text-xl">
-          From emergency call-outs to full rewires, Vantage keeps homes and
+          From emergency service to full rewiring, Vantage keeps homes and
           businesses across the local area safely powered.
         </p>
       </div>

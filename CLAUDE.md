@@ -5,6 +5,7 @@
 ## Project
 
 Electrician services website, For clients looking to book urgent as well non urgent services from someone local to their area, that it's a portfolio demo
+US audience - use US spelling, terms and phone formats
 
 ## Stack
 
@@ -33,10 +34,10 @@ Page1: Home
 1. Hero -tagline, CTA, “Call Now” 3 trust stats along bottom
 2. Featured services, 3 service: Emergency repairs, Residential electrical, Commercial electrical (name + short description), link to services page
 3. Reviews- 4 client testimonial cards in 2x2 grid
-4. Closing CTA band- “Need an electrician? Get a free quote” + button to contact
+4. Closing CTA band- “Need an electrician? Get a free estimate” + button to contact
    Page 2: Services
 5. Page intro-short heading + one line about what Vantage covers
-6. Services- 3 rows, each with title, description image, + “Get a quote” button
+6. Services- 3 rows, each with title, description image, + “Get a free estimate” button
    Page 3: Contact
 7. Page intro – short heading
 8. Two columns:

@@ -2,7 +2,7 @@
 const stats = [
   { value: "15+", label: "Years of experience" },
   { value: "2,000+", label: "Jobs completed" },
-  { value: "24/7", label: "Emergency call-outs" },
+  { value: "24/7", label: "Emergency service" },
 ]
 
 export function TrustStats() {

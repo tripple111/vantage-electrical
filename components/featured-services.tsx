@@ -21,7 +21,7 @@ const services = [
   {
     name: "Residential electrical",
     href: "/services#residential-electrical",
-    description: "Rewiring, lighting, sockets and safety checks for your home.",
+    description: "Rewiring, lighting, outlets and safety checks for your home.",
     icon: HomeIcon,
   },
   {

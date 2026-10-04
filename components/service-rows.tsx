@@ -3,33 +3,34 @@ import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import switchboard from "@/public/switchboard.jpg"
+import commercial from "@/public/commercial.jpg"
+import emergency from "@/public/emergency.jpg"
+import residential from "@/public/residential.jpg"
 
-// Placeholder image for all three rows until real photos are added.
 const services = [
   {
     id: "emergency-repairs",
     title: "Emergency repairs",
     description:
-      "For homeowners, landlords and businesses who need help fast when something goes wrong. We deal with power cuts, tripping circuits, burning smells, exposed wiring and storm damage, day or night.",
-    image: switchboard,
-    alt: "Electrician testing the wiring in a switchboard",
+      "For homeowners, landlords and businesses who need help fast when something goes wrong. We deal with power outages, tripped breakers, burning smells, exposed wiring and storm damage, day or night.",
+    image: emergency,
+    alt: "Electrician in work gloves testing a home electrical panel with a multimeter",
   },
   {
     id: "residential-electrical",
     title: "Residential electrical",
     description:
-      "For homeowners and landlords planning upgrades or keeping a property safe. Typical jobs include full and partial rewires, consumer unit upgrades, new sockets and lighting, EV charger installs and electrical safety certificates.",
-    image: switchboard,
-    alt: "Electrician testing the wiring in a switchboard",
+      "For homeowners and landlords planning upgrades or keeping a property safe. Typical jobs include full and partial rewiring, electrical panel upgrades, new outlets and lighting, EV charger installs and electrical safety inspections.",
+    image: residential,
+    alt: "Electrician on a stepladder installing a pendant light in a modern kitchen",
   },
   {
     id: "commercial-electrical",
     title: "Commercial electrical",
     description:
-      "For shops, offices, restaurants and other businesses that rely on dependable power. We install and maintain commercial lighting, three-phase supplies and emergency lighting, and schedule work around your opening hours.",
-    image: switchboard,
-    alt: "Electrician testing the wiring in a switchboard",
+      "For stores, offices, restaurants and other businesses that rely on dependable power. We install and maintain commercial lighting, three-phase power and emergency lighting, and schedule work around your business hours.",
+    image: commercial,
+    alt: "Electrician on a ladder installing ceiling lights in an open office",
   },
 ]
 
@@ -67,7 +68,7 @@ export function ServiceRows() {
               asChild
               className="mt-2 h-12 w-full px-6 text-base font-bold sm:w-auto sm:self-start"
             >
-              <Link href="/contact">Get a quote</Link>
+              <Link href="/contact">Get a free estimate</Link>
             </Button>
           </div>
         </article>

@@ -1,14 +1,14 @@
 // Placeholder business details shared across the site.
 export const site = {
   name: "Vantage Electrical",
-  phone: { display: "01234 567890", href: "tel:01234567890" },
+  phone: { display: "(813) 555-0142", href: "tel:+18135550142" },
   email: "hello@vantage-electrical.example",
   serviceAreas: [
-    "Northfield",
-    "Easton",
-    "Westbury",
-    "Southgate",
+    "Lakewood",
+    "Oak Grove",
+    "Cedar Park",
+    "Maple Heights",
+    "Brookside",
     "Riverside",
-    "Hillcrest",
   ],
 }

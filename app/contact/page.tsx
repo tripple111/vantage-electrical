@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/contact-form";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Vantage Electrical for urgent call-outs or to book a visit.",
+    "Get in touch with Vantage Electrical for urgent service or to book a visit.",
 };
 
 export default function ContactPage() {
